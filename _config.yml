@@ -25,7 +25,7 @@ animated:             true
 show_related_posts:   true
 show_post_footers:    true
 show_social_icons:    true
-ajaxify_contact_form: false
+ajaxify_contact_form: true
 enable_mathjax: false
 extended_fonts: false
 enable_anchorjs: true
