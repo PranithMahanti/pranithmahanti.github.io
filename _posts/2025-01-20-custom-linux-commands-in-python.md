@@ -1,7 +1,7 @@
 ---
     layout:     post
     title:      Creating custom commands in Linux using Python
-    date:       2020-05-08 11:21:29
+    date:       2025-01-20 23:24:00
     summary:    You can now easily automate your workflow and have fun!
     categories: jekyll pixyll
 ---
