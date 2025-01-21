@@ -1,9 +1,9 @@
 ---
     layout:     post
     title:      Creating custom commands in Linux using Python
-    date:       2025-01-19 11:00:00
+    date:       2025-01-20 11:00:00
     summary:    You can now easily automate your workflow and have fun!
-    categories: jekyll pixyll
+    categories: linux
 ---
 
 Did you know that you can build your own custom commands for your Linux terminal using Python? Or any programming language for that matter?  
@@ -15,7 +15,7 @@ That's right! And this is how it looks:
 $ multiply 2 14
 {% endhighlight %}
 Imagine we have a script ```multiply.py``` with the code as below:  
-{% highlight bash lineanchors %}
+{% highlight python3 lineanchors %}
 import sys
 print(sys.argv[1]*sys.argv[2]) #This outputs the multiply of the number
 {% endhighlight %}
@@ -26,7 +26,7 @@ $ python3 multiply.py 20 4
 {% endhighlight %}
 Now we have just three steps to do…
 
-### Mark your Python file as executable
+## Mark your Python file as executable
 You can mark your file as executable by running ```chmod``` command.  
 
 {% highlight bash lineanchors %}
@@ -50,7 +50,7 @@ Anyway - we run into a crazy error message if you try to run the script.
 
 The reason for that is that now the system doesn’t know it’s supposed to execute a Python script. So instead it takes a wild guess and tries to run your Python script like a shell script with the ```/bin/sh``` interpreter.
 
-### Add a shebang interpreter
+## Add a shebang interpreter
 You will have to add a line to the code in the first line. It tells the computer to run the script as a Python file. The line to add is:
 
 {% highlight bash lineanchors %}
@@ -72,9 +72,9 @@ $ ./multiply 20 20
 400
 {% endhighlight %}
 
-Yes. It gave us the required output.
+Now onto the final step..
 
-### Make sure your program is on the PATH
+## Make sure your program is on the PATH
 The last thing you need to change to make your Python script really seem like a shell command or system tool is to make sure it’s on your ```PATH```.  
 
 I don’t recommend that you try to copy your script to a system directory like ```/usr/bin/``` or ```/usr/local/bin``` because that can lead to all kinds of odd naming conflicts (and, in the worst case, break your operating system install).  
